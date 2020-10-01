@@ -1,0 +1,40 @@
+{% extends 'accounts/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<style media="screen">
+  .profile-pic{
+    max_width: 200px;
+    max_height: 200px;
+    margin: 0 auto;
+    boeder-radius: 50%;
+  }
+</style>
+
+<br>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card card-body">
+      <a style="width=50px;" class="btn btn-warning" href="{% url 'Dashboard' %}">&#8592; Back to Profile </a>
+      <hr>
+      <h3 style="text-align:center;">Accounts Settings</h3>
+      <hr>
+      <img class="profile-pic" src="{{ request.user.customer.image.url }}" alt="">
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card card-body">
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" name="Update Information" >
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
