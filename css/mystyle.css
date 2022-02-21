@@ -4,9 +4,15 @@ body{
 }
 
 #header a:hover{
-  color: #fff;
-
+  color: #fff;}
+.rating{
+font-size:48px;
 }
+.rating{
+color: orange;
+padding:10px;
+}
+
 
 #bg-img{
   background: url("../img/back.jpg");
@@ -51,6 +57,11 @@ body{
 
   #Experience .card{
     border-top: 3px solid #d63031;
+  }
+
+ #Review hr{
+    border-width: 3px;
+    margin-top: 6px;
   }
 
   #Contact span{
